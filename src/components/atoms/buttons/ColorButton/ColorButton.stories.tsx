@@ -14,7 +14,8 @@ export const ColorButtonTest: ComponentStory<typeof ColorButton> = (args) => (
 );
 
 ColorButtonTest.args = {
-  color: "skyblue",
+  backgroundColor: "#8B6FE7",
+  color: "white",
   label: "테스트 버튼",
   handleClick: () => {},
 };

@@ -12,7 +12,8 @@
     "prestart": "yarn update-stories",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=chpt_8718265dd227354"
   },
   "dependencies": {
     "@babel/plugin-proposal-export-namespace-from": "^7.18.9",
@@ -78,5 +79,7 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "OpenOffWireFrame@0.0.1"
 }

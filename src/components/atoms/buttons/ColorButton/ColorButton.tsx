@@ -4,19 +4,22 @@ import { colorButtonStyles } from "./ColorButton.style";
 interface Props {
   label: string;
   color: string;
+  backgroundColor: string;
   handleClick: () => void;
 }
 
-const ColorButton = ({ label, color, handleClick }: Props) => {
+const ColorButton = ({ label, color, backgroundColor, handleClick }: Props) => {
   return (
     <TouchableOpacity
       style={{
         ...colorButtonStyles.container,
-        backgroundColor: color,
+        backgroundColor: backgroundColor,
       }}
       onPress={handleClick}
     >
-      <Text style={colorButtonStyles.labelText}>{label}</Text>
+      <Text style={{ ...colorButtonStyles.labelText, color: color }}>
+        {label}
+      </Text>
     </TouchableOpacity>
   );
 };
