@@ -1,5 +1,5 @@
 import { Text, View } from "react-native";
-import { eventCardStyles } from "./IconText.style";
+import { iconTextStyles } from "./IconText.style";
 
 interface Props {
   icon: React.ReactElement;
@@ -8,11 +8,11 @@ interface Props {
 
 const IconText = ({icon, label}: Props) => {
   return (
-    <View style={eventCardStyles.container}>
+    <View style={iconTextStyles.container}>
       {
         icon
       }
-      <Text style={eventCardStyles.text}>
+      <Text style={iconTextStyles.text}>
         {
           label
         }

@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-export const eventCardStyles = StyleSheet.create({
+export const iconTextStyles = StyleSheet.create({
   container: {
     flexDirection: "row"
   },
