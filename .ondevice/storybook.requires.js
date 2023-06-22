@@ -8,6 +8,16 @@ import {
   clearDecorators,
 } from "@storybook/react-native";
 
+global.STORIES = [
+  {
+    titlePrefix: "",
+    directory: "./src",
+    files: "**/*.stories.?(ts|tsx|js|jsx)",
+    importPathMatcher:
+      "^\\.[\\\\/](?:src(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.(?:ts|tsx|js|jsx)?)$",
+  },
+];
+
 import "@storybook/addon-ondevice-notes/register";
 import "@storybook/addon-ondevice-controls/register";
 import "@storybook/addon-ondevice-backgrounds/register";
@@ -38,7 +48,12 @@ try {
 } catch {}
 
 const getStories = () => {
-  return [require("../components/Button/Button.stories.tsx")];
+  return {
+    "./src/components/atoms/buttons/ColorButton/ColorButton.stories.tsx": require("../src/components/atoms/buttons/ColorButton/ColorButton.stories.tsx"),
+    "./src/components/molecules/cards/EventCard/EventCard.stories.tsx": require("../src/components/molecules/cards/EventCard/EventCard.stories.tsx"),
+    "./src/components/molecules/groups/RadioButtonGroup/RadioButtonGroup.stories.tsx": require("../src/components/molecules/groups/RadioButtonGroup/RadioButtonGroup.stories.tsx"),
+    "./src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx": require("../src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx"),
+  };
 };
 
 configure(getStories, module, false);

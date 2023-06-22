@@ -11,6 +11,8 @@
   - 절대경로 사용을 위해 설치한 라이브러리입니다.
 - yarn add rxn-units
   - 뷰포트 사용을 위해 설치한 라이브러리입니다.
+- yarn add react-native-radio-buttons-group
+  - 리액트 네이티브에서 라디오 버튼을 사용하기 위해 설치한 라이브러리입니다.
 
 
 ### 커밋 컨벤션
