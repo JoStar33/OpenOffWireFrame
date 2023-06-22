@@ -3,16 +3,14 @@ import { StyleSheet } from "react-native";
 export const colorButtonStyles = StyleSheet.create({
   container: {
     maxWidth: 300,
-    minWidth: 150,
-    height: 50,
-    padding: 10,
+    minWidth: 100,
+    height: 35,
     borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",
   },
   labelText: {
-    fontWeight: "800",
-    fontSize: 20,
+    fontSize: 14,
   },
 });
