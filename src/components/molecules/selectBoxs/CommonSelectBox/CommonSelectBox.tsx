@@ -31,7 +31,7 @@ const CommonSelectBox = <T extends SelectBox>({ data }: Props<T>) => {
     handleChange("");
   };
   return (
-    <View style={{position: "relative", zIndex: 9999}}>
+    <View>
       <SelectBoxButton
         handleClick={() => setClicked(!clicked)}
         selectedInfo={selectedInfo}

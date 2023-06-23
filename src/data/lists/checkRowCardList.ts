@@ -15,6 +15,13 @@ export const checkRowCardList: SelectBox[] = [
   {
     id: "325hgfh",
     title: "보리 산책하기",
+    child: [{
+      id: "dsfadffa241234",
+      title: "보리 밥주기 자식",
+    }, {
+      id: "3465434hfgh",
+      title: "보리 물주기 자식",
+    }]
   },
   {
     id: "435435ngvhgfdh",

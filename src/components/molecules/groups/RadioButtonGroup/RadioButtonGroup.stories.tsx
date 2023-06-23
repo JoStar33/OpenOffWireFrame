@@ -1,4 +1,3 @@
-// stories/Button.stories.tsx
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 
 import { useMemo, useState } from "react";

@@ -27,7 +27,7 @@ const ChildSelectBox = <T extends SelectBox>({ data, handleSelected }: Props<T>)
     };
   };
   return (
-    <View style={{position: "relative", zIndex: 9999}}>
+    <View>
       <SelectBoxButton
         handleClick={() => setClicked(!clicked)}
         selectedInfo={selectedInfo}
