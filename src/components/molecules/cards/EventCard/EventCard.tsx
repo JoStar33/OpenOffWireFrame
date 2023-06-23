@@ -1,8 +1,7 @@
 import ColorButton from "components/atoms/buttons/ColorButton/ColorButton";
 import IconButton from "components/atoms/buttons/IconButton/IconButton";
-import IconText from "components/atoms/texts/IconText/IconText";
-import TitleText from "components/atoms/texts/TitleText/TitleText";
-import { Image, Text, View } from "react-native";
+import EventInfoList from "components/molecules/lists/EventInfoList/EventInfoList";
+import { Image, View } from "react-native";
 import FeatherIcon from "react-native-vector-icons/Feather";
 import FontistoIcon from "react-native-vector-icons/Fontisto";
 import { Event } from "types/event";
@@ -17,10 +16,7 @@ const EventCard = ({ event }: Props) => {
     <View style={eventCardStyles.container}>
       <Image style={eventCardStyles.image} source={{ uri: event.image }} />
       <View style={eventCardStyles.eventInfo}>
-        <Text style={{color: "black"}}>{event.date}</Text>
-        <TitleText label={event.name}/>
-        <IconText icon={<FeatherIcon color={"black"} size={20} name="map-pin" />} label={"이벤트 장소"}/>
-        <IconText icon={<FeatherIcon color={"black"} size={20} name="user" />} label={`${event.participant}명 참가 예정`}/>
+        <EventInfoList event={event}/>
       </View>
       <View style={eventCardStyles.actionContainer}>
         <ColorButton label={"신청하기"} color={"white"} backgroundColor={"#8B6FE7"} handleClick={() => {
