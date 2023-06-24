@@ -29,8 +29,8 @@ const UserCard = ({ user }: Props) => {
           label={"관심 지역"}
         />
         <View style={userCardStyles.fieldContainer}>
-          {user.interestField.map((field) => (
-            <ColorBox label={`#${field}`} fontColor={"white"} color={"#8B6FE7"} />
+          {user.interestField.map((field, _id) => (
+            <ColorBox key={_id} label={`#${field}`} fontColor={"white"} color={"#8B6FE7"} />
           ))}
         </View>
       </View>
