@@ -12,7 +12,7 @@ interface FormValidateModel {
     value: boolean;
     message: string;
   };
-  validate: (value: string) => string | boolean;
+  validate: (value: string) => string | undefined;
 }
 
 interface SubmitValue {

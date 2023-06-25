@@ -15,9 +15,9 @@ const validatePassword = (password: string) => {
 const validateEmail = (email: string) => {
   if (email)
     return !/^[a-zA-Z0-9+-_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email)
-      ? false
-      : true;
-  return true;
+      ? "이메일 형식에 맞지않습니다. 다시 입력해주세요."
+      : undefined;
+  return undefined;
 };
 
 const validateCount = (count: number) => {
@@ -25,36 +25,36 @@ const validateCount = (count: number) => {
     if (count < 0) return false;
     if (count > 10) return false;
   }
-  return true;
+  return undefined;
 };
 
 const validateBirthday = (birthday: string) => {
   if (birthday)
     return /^(19[0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/.test(birthday)
-      ? true
-      : false
-  return true;
+      ? undefined
+      : "생년월일 형식으로 작성해주세요!"
+  return undefined;
 }
 
-const validateNick = (nick: string) => {
-  if (nick) {
+const validateName = (name: string) => {
+  if (name) {
     const patternCnt = [
       { type: /^(?=.*?[가-힣])/ },
       { type: /^.{3,8}$/ },
     ].filter((item) => {
-      return item.type.test(nick);
+      return item.type.test(name);
     }).length;
-    return patternCnt < 2 ? false : true;
+    return patternCnt < 2 ? "이름은 한글로만 구성해주세요." : undefined;
   }
-  return true;
+  return undefined;
 };
 
 const validatePhoneNumber = (phonenumber: string) => {
   if(phonenumber) 
     return /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/.test(phonenumber)
-      ? true
-      : false
-  return true;
+      ? undefined
+      : "핸드폰 형식에 맞지않습니다. 다시 입력해주세요."
+  return undefined;
 }
 
 const validatePasswordCheck = (
@@ -63,12 +63,12 @@ const validatePasswordCheck = (
 ) =>
   password !== passwordCheck
     ? "비밀번호가 확인값과 다릅니다. 다시입력 해주세요."
-    : null;
+    : undefined;
 
 export {
   validatePassword,
   validateEmail,
-  validateNick,
+  validateName,
   validatePasswordCheck,
   validateCount,
   validateBirthday,

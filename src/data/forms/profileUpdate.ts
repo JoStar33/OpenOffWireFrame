@@ -1,5 +1,5 @@
 import { FormValidateModel } from "types/apps/form";
-import { validateEmail, validateNick, validateBirthday, validatePhoneNumber } from "utils/validate";
+import { validateEmail, validateName, validateBirthday, validatePhoneNumber } from "utils/validate";
 
 export const profileUpdateForm: FormValidateModel[] = [
   {
@@ -11,7 +11,7 @@ export const profileUpdateForm: FormValidateModel[] = [
       message: "필수로 작성해주셔야 합니다!",
     },
     validate: (value: string) =>
-      validateNick(value) || "이름은 한글로만 구성해주세요.",
+      validateName(value)
   },
   {
     type: "text",
@@ -22,7 +22,7 @@ export const profileUpdateForm: FormValidateModel[] = [
       message: "필수로 작성해주셔야 합니다!",
     },
     validate: (value: string) =>
-      validateBirthday(value) || "생년월일 형식으로 작성해주세요!",
+      validateBirthday(value)
   },
   {
     type: "gender",
@@ -33,7 +33,7 @@ export const profileUpdateForm: FormValidateModel[] = [
       message: "필수로 작성해주셔야 합니다!",
     },
     validate: (value: string) =>
-      true,
+      undefined
   },
   {
     type: "text",
@@ -44,7 +44,7 @@ export const profileUpdateForm: FormValidateModel[] = [
       message: "필수로 작성해주셔야 합니다!",
     },
     validate: (value: string) => 
-      validatePhoneNumber(value) || "핸드폰 형식에 맞지않습니다. 다시 입력해주세요.",
+      validatePhoneNumber(value)
   },
   {
     type: "text",
@@ -55,6 +55,6 @@ export const profileUpdateForm: FormValidateModel[] = [
       message: "필수로 작성해주셔야 합니다!",
     },
     validate: (value: string) =>
-      validateEmail(value) || "이메일 형식에 맞지않습니다. 다시 입력해주세요.",
+      validateEmail(value)
   }
 ];
