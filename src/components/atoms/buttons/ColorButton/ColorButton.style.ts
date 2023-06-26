@@ -6,6 +6,7 @@ export const colorButtonStyles = StyleSheet.create({
     minWidth: 100,
     height: 35,
     borderRadius: 10,
+    paddingHorizontal: 10,
     justifyContent: "center",
     alignItems: "center",
     flexDirection: "row",

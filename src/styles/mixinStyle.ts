@@ -2,14 +2,13 @@ import { Platform, StyleSheet } from "react-native";
 
 const mixinStyle = StyleSheet.create({
   input: {
-    fontSize: 20,
-    borderRadius: 5,
-    borderWidth: 2,
-    borderColor: "black",
+    fontSize: 15,
+    borderRadius: 10
   },
   inputTitle: {
-    fontSize: 18,
-    fontWeight: "800",
+    fontSize: 15,
+    marginBottom: 2,
+    fontWeight: "800"
   },
   dialog: {
     margin: 0,
@@ -65,4 +64,3 @@ const mixinStyle = StyleSheet.create({
 });
 
 export { mixinStyle };
-

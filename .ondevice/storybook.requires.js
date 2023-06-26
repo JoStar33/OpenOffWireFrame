@@ -51,10 +51,11 @@ const getStories = () => {
   return {
     "./src/components/atoms/buttons/ColorButton/ColorButton.stories.tsx": require("../src/components/atoms/buttons/ColorButton/ColorButton.stories.tsx"),
     "./src/components/atoms/buttons/EventFieldButton/EventFieldButton.stories.tsx": require("../src/components/atoms/buttons/EventFieldButton/EventFieldButton.stories.tsx"),
+    "./src/components/events/form/EventMakeForm/EventMakeForm.stories.tsx": require("../src/components/events/form/EventMakeForm/EventMakeForm.stories.tsx"),
     "./src/components/molecules/cards/EventCard/EventCard.stories.tsx": require("../src/components/molecules/cards/EventCard/EventCard.stories.tsx"),
     "./src/components/molecules/cards/MyEventCard/MyEventCard.stories.tsx": require("../src/components/molecules/cards/MyEventCard/MyEventCard.stories.tsx"),
+    "./src/components/molecules/cards/ProfileUpdateCard/ProfileUpdateCard.stories.tsx": require("../src/components/molecules/cards/ProfileUpdateCard/ProfileUpdateCard.stories.tsx"),
     "./src/components/molecules/cards/UserCard/UserCard.stories.tsx": require("../src/components/molecules/cards/UserCard/UserCard.stories.tsx"),
-    "./src/components/molecules/groups/RadioButtonGroup/RadioButtonGroup.stories.tsx": require("../src/components/molecules/groups/RadioButtonGroup/RadioButtonGroup.stories.tsx"),
     "./src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx": require("../src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx"),
   };
 };
