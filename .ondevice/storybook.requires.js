@@ -56,6 +56,7 @@ const getStories = () => {
     "./src/components/molecules/cards/MyEventCard/MyEventCard.stories.tsx": require("../src/components/molecules/cards/MyEventCard/MyEventCard.stories.tsx"),
     "./src/components/molecules/cards/ProfileUpdateCard/ProfileUpdateCard.stories.tsx": require("../src/components/molecules/cards/ProfileUpdateCard/ProfileUpdateCard.stories.tsx"),
     "./src/components/molecules/cards/UserCard/UserCard.stories.tsx": require("../src/components/molecules/cards/UserCard/UserCard.stories.tsx"),
+    "./src/components/molecules/dialogs/CalenderTimeDialog/CalendarTimeDialog.stories.tsx": require("../src/components/molecules/dialogs/CalenderTimeDialog/CalendarTimeDialog.stories.tsx"),
     "./src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx": require("../src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx"),
   };
 };
