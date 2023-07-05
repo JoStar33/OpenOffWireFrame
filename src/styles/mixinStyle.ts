@@ -14,8 +14,8 @@ const mixinStyle = StyleSheet.create({
     margin: 0,
     borderRadius: 20,
     padding: 35,
+    justifyContent: "center",
     alignItems: 'center',
-    backgroundColor: "white",
     ...Platform.select({
       ios: {
         shadowOffset: {

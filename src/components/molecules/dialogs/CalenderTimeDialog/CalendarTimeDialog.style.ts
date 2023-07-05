@@ -1,14 +1,17 @@
 import { StyleSheet } from "react-native";
 import { mixinStyle } from "styles/mixinStyle";
 
-export const successDialogStyles = StyleSheet.create({
+export const calendarTimeDialogStyles = StyleSheet.create({
   modalView: {
     ...mixinStyle.dialog,
   },
   centeredView: {
-    flex: 1,
+    backgroundColor: "white",
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 22,
+    width: 400,
+    borderRadius: 20,
+    marginTop: 22
   },
+  calendar: {}
 });

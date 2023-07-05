@@ -48,6 +48,21 @@ const EventMakeForm = () => {
         errors={errors}
         control={control}
       />
+      <FormValidateInput
+        model={{
+          type: "text",
+          name: "organizer",
+          label: "이벤트 제목을 작성해주세요.",
+          required: {
+            value: true,
+            message: "필수 입력 사항입니다!",
+          },
+          validate: (value: string) => undefined,
+        }}
+        errors={errors}
+        control={control}
+        color={"black"}
+      />
     </View>
   );
 };
