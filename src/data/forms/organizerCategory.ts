@@ -1,6 +1,6 @@
-import { RadioButtonProps } from "react-native-radio-buttons-group";
+import { Organizer } from "types/organizer";
 
-export const organizerCategory: RadioButtonProps[] = [
+export const organizerCategory: Organizer[] = [
   {
     id: "1",
     label: "개인",
@@ -41,4 +41,4 @@ export const organizerCategory: RadioButtonProps[] = [
     label: "기타",
     value: "etc",
   },
-]
+];
