@@ -1,4 +1,5 @@
 ### 설치한 라이브러리들
+
 - yarn add @react-navigation/material-bottom-tabs react-native-paper react-native-pager-view react-native-safe-area-context react-native-tab-view @react-navigation/native
   - 바텀 탭 네비게이션 구현에 필요한 라이브러리입니다.
 - yarn add react-native-reanimated@2.15.0 @babel/plugin-proposal-export-namespace-from
@@ -14,8 +15,8 @@
 - yarn add react-native-radio-buttons-group
   - 리액트 네이티브에서 라디오 버튼을 사용하기 위해 설치한 라이브러리입니다.
 
-
 ### 커밋 컨벤션
+
 ```md
 - fix: 버그 수정에 대한 커밋입니다.
 - refactor: 리팩토링 범위의 수정에 대한 커밋입니다.
