@@ -3,7 +3,7 @@ import CommonCarousel from "components/molecules/carousel/CommonCarousel/CommonC
 import OrganizerCarousel from "components/molecules/carousel/OrganizerCarousel/OrganizerCarousel";
 import { carouselData } from "data/lists/carousels";
 import { eventList } from "data/lists/eventList";
-import { FlatList, ScrollView, View } from "react-native";
+import { FlatList, ScrollView, Text, View } from "react-native";
 import { homeScreenStyles } from "./HomeScreen.style";
 
 const HomeScreen = () => {
@@ -16,6 +16,7 @@ const HomeScreen = () => {
       >
         <CommonCarousel carouselData={carouselData} />
         <OrganizerCarousel />
+        <Text style={homeScreenStyles.eventTitle}>죠스타님 맞춤 이벤트 추천</Text>
         <FlatList
           scrollEnabled={false}
           data={eventList}
@@ -26,6 +27,7 @@ const HomeScreen = () => {
             <EventCard key={event.index} event={event.item} />
           )}
         />
+        <Text style={homeScreenStyles.eventTitle}>지금 핫한 인기 이벤트</Text>
         <FlatList
           scrollEnabled={false}
           data={eventList}

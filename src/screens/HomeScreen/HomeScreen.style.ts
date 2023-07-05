@@ -6,5 +6,11 @@ export const homeScreenStyles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     alignItems: "center",
+  },
+  eventTitle: {
+    marginTop: 35,
+    fontSize: 17,
+    color: "white",
+    width: "95%"
   }
 })
