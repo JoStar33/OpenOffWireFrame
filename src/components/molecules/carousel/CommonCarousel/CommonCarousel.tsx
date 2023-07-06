@@ -14,7 +14,7 @@ const CommonCarousel = <T extends CarouselElement>({
     <Carousel
       loop
       autoPlay={true}
-      autoPlayInterval={8000}
+      autoPlayInterval={2000}
       style={{ width: "100%", marginTop: 40 }}
       width={vw(97)}
       height={300}
