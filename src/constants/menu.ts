@@ -1,6 +1,5 @@
 const enum StackMenu {
-  BottomTabNavigator = "BottomTabNavigator",
-  Login = "Login"
+  BottomTabNavigator = "BottomTabNavigator"
 };
 
 const enum BottomTabMenu {
@@ -8,4 +7,16 @@ const enum BottomTabMenu {
   My = "My"
 };
 
-export { BottomTabMenu, StackMenu };
+const enum AuthorizeMenu {
+  Login = "Login",
+  AgreeToTerm = "AgreeToTerm",
+  PhoneCertification = "PhoneCertification",
+  EmailPassword = "EmailPassword",
+  NickName = "NickName",
+  UserInfo = "UserInfo",
+  BirthDay = "BirthDay",
+  InterestField = "InterestField"
+}
+
+export { AuthorizeMenu, BottomTabMenu, StackMenu };
+
