@@ -7,9 +7,9 @@ const validatePassword = (password: string) => {
     ].filter((item) => {
       return item.type.test(password);
     }).length;
-    return patternCnt < 3 ? false : true;
+    return patternCnt < 3 ? "비밀번호는 영문, 특수문자, 숫자를 포함한 9 ~ 16자리를 입력해야합니다." : undefined;
   }
-  return true;
+  return undefined;
 };
 
 const validateEmail = (email: string) => {
@@ -66,12 +66,7 @@ const validatePasswordCheck = (
     : undefined;
 
 export {
-  validatePassword,
-  validateEmail,
-  validateName,
-  validatePasswordCheck,
-  validateCount,
-  validateBirthday,
-  validatePhoneNumber
+  validateBirthday, validateCount, validateEmail,
+  validateName, validatePassword, validatePasswordCheck, validatePhoneNumber
 };
 
