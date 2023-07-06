@@ -1,9 +1,6 @@
 import SelectBoxButton from "components/atoms/buttons/SelectBoxButton/SelectBoxButton";
 import SelectBoxList from "components/molecules/lists/SelectBoxList/SelectBoxList";
 import { useState } from "react";
-import {
-  View
-} from "react-native";
 import { SelectBox } from "types/apps/selectbox";
 
 interface Props<T> {
@@ -31,7 +28,7 @@ const CommonSelectBox = <T extends SelectBox>({ data }: Props<T>) => {
     handleChange("");
   };
   return (
-    <View>
+    <>
       <SelectBoxButton
         handleClick={() => setClicked(!clicked)}
         selectedInfo={selectedInfo}
@@ -43,7 +40,7 @@ const CommonSelectBox = <T extends SelectBox>({ data }: Props<T>) => {
         data={selectBoxData}
         handleSelected={handleSelected}
       />
-    </View>
+    </>
   );
 };
 
