@@ -28,6 +28,9 @@ const PhoneCertificationScreen = ({dispatch}: Props) => {
       authnumber: '',
     },
   });
+  const handleCertificate = () => {
+    console.log(getValues().phonenumber)
+  }
   return (
     <View style={phoneCertificationScreenStyles.container}>
       <Text style={phoneCertificationScreenStyles.title}>
@@ -40,6 +43,7 @@ const PhoneCertificationScreen = ({dispatch}: Props) => {
         width={260}
         control={control}
         errors={errors}
+        handlePress={handleCertificate}
       />
       <EssentialInput
         validation={validatePhoneNumber}
