@@ -30,7 +30,7 @@ const validateCount = (count: number) => {
 
 const validateBirthday = (birthday: string) => {
   if (birthday)
-    return /^(19[0-9][0-9]|20\d{2})(0[0-9]|1[0-2])(0[1-9]|[1-2][0-9]|3[0-1])$/.test(birthday)
+    return /^(19|20)\d\d-(0[1-9]|1[0-2])-([0-2][1-9]|3[0-1])$/.test(birthday)
       ? undefined
       : "생년월일 형식으로 작성해주세요!"
   return undefined;
@@ -57,6 +57,14 @@ const validatePhoneNumber = (phonenumber: string) => {
   return undefined;
 }
 
+const validateAuthNumber = (phonenumber: string) => {
+  if(phonenumber) 
+    return /^\d{4,6}$/.test(phonenumber)
+      ? undefined
+      : "인증번호 형식에 맞지않습니다."
+  return undefined;
+}
+
 const validatePasswordCheck = (
   password: string | undefined,
   passwordCheck: string | undefined
@@ -66,7 +74,7 @@ const validatePasswordCheck = (
     : undefined;
 
 export {
-  validateBirthday, validateCount, validateEmail,
+  validateAuthNumber, validateBirthday, validateCount, validateEmail,
   validateName, validatePassword, validatePasswordCheck, validatePhoneNumber
 };
 
