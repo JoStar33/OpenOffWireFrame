@@ -4,7 +4,9 @@ import { AuthorizeMenu } from "constants/menu";
 import { Reducer, useReducer } from "react";
 import AgreeToTermScreen from "screens/authorize/AgreeToTermScreen/AgreeToTermScreen";
 import LoginScreen from "screens/authorize/LoginScreen/LoginScreen";
+import NickNameScreen from "screens/authorize/NickNameScreen/NickNameScreen";
 import PhoneCertificationScreen from "screens/authorize/PhoneCertificationScreen/PhoneCertificationScreen";
+import UserInfoScreen from "screens/authorize/UserInfoScreen/UserInfoScreen";
 import { Action, JoinInfo } from "types/join";
 const Stack = createStackNavigator();
 
@@ -69,6 +71,12 @@ const AuthorizeNavigator = () => {
       </Stack.Screen>
       <Stack.Screen name={AuthorizeMenu.PhoneCertification}>
         {() => <PhoneCertificationScreen dispatch={dispatch}/>}
+      </Stack.Screen>
+      <Stack.Screen name={AuthorizeMenu.NickName}>
+        {() => <NickNameScreen dispatch={dispatch}/>}
+      </Stack.Screen>
+      <Stack.Screen name={AuthorizeMenu.UserInfo}>
+        {() => <UserInfoScreen dispatch={dispatch}/>}
       </Stack.Screen>
     </Stack.Navigator>
   );
