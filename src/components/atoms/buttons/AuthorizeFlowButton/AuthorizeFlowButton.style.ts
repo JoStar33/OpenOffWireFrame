@@ -9,7 +9,6 @@ export const authorizeFlowButtonStyles = StyleSheet.create({
   container: {
     width: 350,
     height: 55,
-    marginTop: 251,
     borderRadius: 27.5,
     justifyContent: "center",
     alignItems: "center",
