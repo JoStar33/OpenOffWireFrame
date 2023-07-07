@@ -5,12 +5,12 @@ import { phoneAuthButtonStyles } from "./PhoneAuthButton.style";
 interface Props {
   label: string;
   active: boolean;
-  handlePress: () => {};
+  handlePress: () => void;
 }
 
 const PhoneAuthButton = ({ label, active, handlePress }: Props) => {
   return (
-    <>
+    <View style={phoneAuthButtonStyles.container}>
       {active ? (
         <TouchableOpacity style={phoneAuthButtonStyles.activeButton} onPress={handlePress}>
           <Text style={phoneAuthButtonStyles.activeLabel}>{label}</Text>
@@ -20,7 +20,7 @@ const PhoneAuthButton = ({ label, active, handlePress }: Props) => {
           <Text style={phoneAuthButtonStyles.nonActiveLabel}>{label}</Text>
         </View>
       )}
-    </>
+    </View>
   );
 };
 

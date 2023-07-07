@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 export const checkButtonStyles = StyleSheet.create({
   container: {
     flexDirection: "row",
+    alignItems: "center"
   },
   checkContainer: {
     width: 18,

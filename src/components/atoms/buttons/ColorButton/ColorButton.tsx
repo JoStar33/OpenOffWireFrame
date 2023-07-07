@@ -6,18 +6,22 @@ interface Props {
   color: string;
   marginRight?: number;
   marginLeft?: number;
+  marginBottom?: number;
+  borderColor?: string;
   backgroundColor: string;
   handleClick: () => void;
 }
 
-const ColorButton = ({ label, color, backgroundColor, handleClick, marginRight, marginLeft }: Props) => {
+const ColorButton = ({ label, color, backgroundColor, handleClick, marginRight, marginLeft, marginBottom, borderColor = "transparent" }: Props) => {
   return (
     <TouchableOpacity
       style={{
         ...colorButtonStyles.container,
         backgroundColor: backgroundColor,
+        borderColor: borderColor,
         marginRight: marginRight ?? 0,
         marginLeft: marginLeft ?? 0,
+        marginBottom: marginBottom ?? 0
       }}
       onPress={handleClick}
     >

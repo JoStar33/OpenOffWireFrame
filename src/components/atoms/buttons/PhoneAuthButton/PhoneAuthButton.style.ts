@@ -1,9 +1,13 @@
 import { StyleSheet } from "react-native";
 
 export const phoneAuthButtonStyles = StyleSheet.create({
+  container: {
+    height: "100%"
+  },
   activeButton: {
     width: 80,
     height: 40,
+    marginTop: 30,
     marginLeft: 10,
     borderRadius: 27.5,
     justifyContent: "center",
@@ -20,6 +24,7 @@ export const phoneAuthButtonStyles = StyleSheet.create({
   nonActiveButton: {
     width: 80,
     height: 40,
+    marginTop: 30,
     marginLeft: 10,
     borderRadius: 27.5,
     justifyContent: "center",
