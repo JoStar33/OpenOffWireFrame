@@ -58,6 +58,8 @@ const getStories = () => {
     "./src/components/molecules/cards/UserCard/UserCard.stories.tsx": require("../src/components/molecules/cards/UserCard/UserCard.stories.tsx"),
     "./src/components/molecules/dialogs/CalenderTimeDialog/CalendarTimeDialog.stories.tsx": require("../src/components/molecules/dialogs/CalenderTimeDialog/CalendarTimeDialog.stories.tsx"),
     "./src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx": require("../src/components/molecules/selectBoxs/CommonSelectBox/CommonSelectBox.stories.tsx"),
+    "./src/screens/authorize/InterestFieldScreen/InterestFieldScreen.stories.tsx": require("../src/screens/authorize/InterestFieldScreen/InterestFieldScreen.stories.tsx"),
+    "./src/screens/authorize/UserInfoScreen/UserInfoScreen.stories.tsx": require("../src/screens/authorize/UserInfoScreen/UserInfoScreen.stories.tsx"),
   };
 };
 
