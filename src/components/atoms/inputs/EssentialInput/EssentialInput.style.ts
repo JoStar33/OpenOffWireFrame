@@ -1,7 +1,8 @@
 import { StyleSheet } from 'react-native';
 export const essentialInputStyles = StyleSheet.create({
   container: {
-    flexDirection: "column"
+    flexDirection: "row",
+    marginBottom: 20
   },
   inputContainer: {
     height: 54,
@@ -10,14 +11,16 @@ export const essentialInputStyles = StyleSheet.create({
   },
   phoneInputContainer: {
     justifyContent: "center",
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center"
   },
   label: {
+    alignItems: "flex-start",
     marginLeft: 10,
     fontSize: 15,
     fontWeight: "600",
-    color: "#B9B9B9"
+    color: "#B9B9B9",
+    marginBottom: 4
   },
   errorText: {
     color: "red",
