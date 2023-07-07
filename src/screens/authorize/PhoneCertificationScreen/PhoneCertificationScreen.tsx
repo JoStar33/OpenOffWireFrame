@@ -3,34 +3,24 @@ import AuthorizeFlowButton from "components/atoms/buttons/AuthorizeFlowButton/Au
 import EssentialInput from "components/atoms/inputs/EssentialInput/EssentialInput";
 import { UserInfoStatus } from "constants/join";
 import { AuthorizeMenu } from "constants/menu";
-import { Dispatch } from "react";
-import { FieldValues, useForm } from "react-hook-form";
+import { Dispatch, useState } from "react";
 import { Text, View } from "react-native";
 import { RootStackParamList } from "types/apps/menu";
 import { Action } from "types/join";
-import { validatePhoneNumber } from "utils/validate";
+import { validateAuthNumber, validatePhoneNumber } from "utils/validate";
 import { phoneCertificationScreenStyles } from "./PhoneCertificationScreen.style";
 
 interface Props {
   dispatch: Dispatch<Action>;
 }
 
-const PhoneCertificationScreen = ({dispatch}: Props) => {
+const PhoneCertificationScreen = ({ dispatch }: Props) => {
   const navigation = useNavigation<NavigationProp<RootStackParamList>>();
-  const {
-    handleSubmit,
-    control,
-    formState: { errors },
-    getValues
-  } = useForm<FieldValues>({
-    defaultValues: {
-      phonenumber: '',
-      authnumber: '',
-    },
-  });
-  const handleCertificate = () => {
-    console.log(getValues().phonenumber)
-  }
+  const [phonenumber, setPhonenumber] = useState<string>("");
+  const [authnumber, setAuthnumber] = useState<string>("");
+  const handlePress = () => {
+    console.log(phonenumber);
+  };
   return (
     <View style={phoneCertificationScreenStyles.container}>
       <Text style={phoneCertificationScreenStyles.title}>
@@ -39,25 +29,29 @@ const PhoneCertificationScreen = ({dispatch}: Props) => {
       <EssentialInput
         validation={validatePhoneNumber}
         label="휴대폰 번호"
-        name="phonenumber"
         width={260}
-        control={control}
-        errors={errors}
-        handlePress={handleCertificate}
+        keyboardType={"number-pad"}
+        value={phonenumber}
+        setValue={setPhonenumber}
+        type={"phonenumber"}
+        handlePress={handlePress}
       />
       <EssentialInput
-        validation={validatePhoneNumber}
+        validation={validateAuthNumber}
         label="인증번호"
-        name="authnumber"
-        width={350}
-        control={control}
-        errors={errors}
+        keyboardType={"number-pad"}
+        value={authnumber}
+        setValue={setAuthnumber}
+        type={"authnumber"}
       />
-      {getValues().phonenumber && getValues().authnumber ? (
+      {!validatePhoneNumber(phonenumber) &&
+      phonenumber.length > 1 &&
+      authnumber.length > 1 &&
+      !validateAuthNumber(authnumber) ? (
         <AuthorizeFlowButton
           handlePress={() => {
             dispatch({ type: UserInfoStatus.SET_AGREE_TO_TERM, value: "Y" });
-            navigation.navigate(AuthorizeMenu.PhoneCertification);
+            navigation.navigate(AuthorizeMenu.NickName);
           }}
           color={"#9B84F8"}
           fontColor={"#FFF"}
